@@ -1,0 +1,61 @@
+<!--<h1>{{title}}</h1>
+<h2>str</h2>
+<h2>bool</h2>
+<h2>{{obj.b}}</h2>
+<h2>{{arr[0]}}</h2>
+
+
+
+
+<div [title]="title">test</div>
+<div [title]="'title'">test</div>
+
+
+<img src="https://cdn.pixabay.com/photo/2018/05/07/10/48/husky-3380548__340.jpg" width="200">
+
+<img [src]="imgs[count]" width="200">
+
+<div style="margin-bottom:10px" [class]="blue">aaa</div>
+<div style="margin-bottom:10px" [class.blue]="true">aaa</div>
+<div style="margin-bottom:10px" [class]="[blue,border]">aaa</div>
+<div style="margin-bottom:10px" [class]="{blue: false,border: true}">aaa</div> 
+
+<div style="margin-bottom:10px" [class]="blue">aaa</div> 
+
+<div style="margin-bottom:10px" [class]="blue">aaa</div>
+
+<button (click)="myFunc($event)">click</button>
+<button (click)="isLoggedIn = !isLoggedIn">click</button>
+
+<span>Hello {{isLoggedIn ? user.fname[0] + user.lname[0]: 'guest'}}</span>-->
+<!--<button (click)="isLoggedIn = !isLoggedIn">click</button>
+<button (mouseover)="isLoggedIn = !isLoggedIn" (mouseleave)="isLoggedIn = !isLoggedIn">click</button>
+
+
+ <h1 [class.cool]="isLoggedIn">Hello {{isLoggedIn ? user.fname[0] + user.lname[0]: 'guest'}}</h1>
+ <h1 [class]="{cool: isLoggedIn,blue: !isLoggedIn}">Hello {{isLoggedIn ? user.fname[0] + user.lname[0]: 'guest'}}</h1>-->
+
+ <!-- <span [style]="{top: y+'px',left: x+'px'}">ball</span>
+ <div (mousemove)="move($event)">push</div> -->
+<body>
+ <div class="statistics">
+ <h1>{{title}}</h1>
+ <h3>Total sick: {{sickPeople}}</h3>
+ <h3>Total quarantined: {{quarantinedPeople}}</h3>
+ <h3>Total healthy: {{healthyPeople}}</h3>
+ </div>
+ 
+ <div class="cards-container">
+  <div *ngFor="let user of covidUsers" [class]="{'userCube': true, 'covid':user.hasCovid ,'healthy': !user.hasCovid, 'quarantine': user.isolated}">
+
+    <div class="cubeContent">
+        <div class="user-details">
+        {{user.fname}}
+        {{user.lname}}</div><br><br>
+        <button *ngIf="user.isAdmin">user name is admin</button>
+    </div>
+
+  </div>
+</div>
+
+</body>
