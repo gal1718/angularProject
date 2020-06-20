@@ -1,0 +1,38 @@
+div{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100px;
+    height:100px;
+    border: 4px white solid;
+    border-radius: 16%;
+    padding: 14px;
+    margin: 17px;
+    
+}
+span{
+    align-self: center;
+}
+
+#name{
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+.covid{
+    border: 4px solid red;
+}
+
+.quarantine{
+    border: 4px solid orange;
+}
+
+.healthy{
+    background-color: darkseagreen;
+}
+
+button{
+
+    font-size: 14px;
+}

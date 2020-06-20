@@ -1,0 +1,7 @@
+<header>
+    <img (click)="openmenu.emit('')" width="30px" height="30px" src="https://img.icons8.com/ios-glyphs/60/000000/menu.png"/>
+    <!-- <button (click)="openmenu.emit('')">Menu</button> -->
+    <h1>{{title}}</h1>
+    <span>{{loggeduser.fname[0]+loggeduser.lname[0]}}</span>
+</header>
+<ng-content select=".sidemenu"></ng-content>

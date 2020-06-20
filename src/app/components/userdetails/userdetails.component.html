@@ -1,0 +1,25 @@
+<div class="container">
+    
+    <ng-content select="h1"></ng-content>
+    <div> <img [src]="clickeduser.img"> </div>
+    <div> 
+       Name: {{clickeduser.fname + " " + clickeduser.lname}}
+    </div>
+
+    <div>
+        Age: {{clickeduser.age}}
+    </div>
+
+    <div> Status: {{clickeduser.hasCovid ? 'Sick' : 'Healthy'}}</div>
+    
+    <p>Date checked {{clickeduser.dateChecked | date}}</p>
+    
+    <h3>Contact Info</h3>
+    <div *ngFor="let item of clickeduser.contact | keyvalue">
+        {{item.key}}:{{item.value}}
+    </div>
+
+    <button (click)="close.emit(clickeduser)">Close</button>
+    <ng-content select="h2"></ng-content>
+</div>
+

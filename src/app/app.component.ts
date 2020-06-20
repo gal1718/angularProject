@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import {users} from './data/data'
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'COVID';
+  loggeduser = {fname: 'Gal', lname:'Shimoni'};
+  title = 'COVID - 19';
   covidUsers = users;
   sickPeople = 0;
   quarantinedPeople = 0;
   healthyPeople = 0;
+  clickedUser;
+  showMenu = false;
+
 // x;
 // y;
 //   imgs = ['https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg',

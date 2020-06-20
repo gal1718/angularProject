@@ -1,0 +1,15 @@
+
+<div [class]="{'covid':user.hasCovid ,'healthy': !user.hasCovid, 'quarantine': user.isolated}">
+    <span id="name">{{user.fname + " " + user.lname }}</span>
+    <span *ngIf="user.hasCovid">{{'Has Covid'}}</span>
+    <span *ngIf="user.isolated">{{'Isolated'}}</span>
+</div>
+
+<!-- <ng-container *ngIf= "userClicked == true">
+    <app-userdetails [clickeduser]="user"></app-userdetails>
+</ng-container> -->
+
+<!-- <div *ngIf="clickedUser">{{clickedUser}}</div> -->
+
+
+
